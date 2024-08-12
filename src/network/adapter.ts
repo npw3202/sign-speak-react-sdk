@@ -61,7 +61,7 @@ export async function produceSpeech(eng: string, model: string = "MALE"): Promis
     return res;
 }
 
-async function runRequest(request: string, payload: any, responseType: string | undefined = "json"): Promise<any> {
+export async function runRequest(request: string, payload: any, responseType: string | undefined = "json"): Promise<any> {
     const requestHeaders: HeadersInit = new Headers();
     requestHeaders.set('Content-Type', 'application/json');
     requestHeaders.set('X-api-key', getKey()!);

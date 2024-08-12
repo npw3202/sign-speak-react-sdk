@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.produceSpeech = exports.produceSign = exports.recognizeSpeech = exports.submitFeedback = exports.recognizeSign = void 0;
+exports.runRequest = exports.produceSpeech = exports.produceSign = exports.recognizeSpeech = exports.submitFeedback = exports.recognizeSign = void 0;
 var key_1 = require("./key");
 var API_ENDPOINT = "https://api.sign-speak.com";
 function recognizeSign(vidB64, model) {
@@ -208,3 +208,4 @@ function runRequest(request, payload, responseType) {
         });
     });
 }
+exports.runRequest = runRequest;
