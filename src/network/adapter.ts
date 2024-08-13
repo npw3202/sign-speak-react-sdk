@@ -75,6 +75,10 @@ export async function runRequest(request: string, payload: any, responseType: st
     let response = await fetch(API_ENDPOINT + request, options);
     let data;
 
+    if (response.status != 200 && response.status != 202) {
+        throw response.status
+    }
+
     if (responseType === 'blob') {
         data = await response.blob();
     } else {

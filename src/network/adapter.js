@@ -166,6 +166,9 @@ function runRequest(request, payload, responseType) {
                     return [4 /*yield*/, fetch(API_ENDPOINT + request, options)];
                 case 1:
                     response = _a.sent();
+                    if (response.status != 200 && response.status != 202) {
+                        throw response.status;
+                    }
                     if (!(responseType === 'blob')) return [3 /*break*/, 3];
                     return [4 /*yield*/, response.blob()];
                 case 2:
