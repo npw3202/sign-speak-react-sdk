@@ -15,7 +15,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpeechProduction = exports.SpeechRecognition = exports.SignRecognition = exports.SignProduction = void 0;
-require("./tailwind.css");
 var SignProduction_1 = require("./stories/SignProduction");
 Object.defineProperty(exports, "SignProduction", { enumerable: true, get: function () { return SignProduction_1.SignProduction; } });
 var SignRecognition_1 = require("./stories/SignRecognition");
